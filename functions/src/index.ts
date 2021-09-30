@@ -42,8 +42,8 @@ exports.processSignUp = functions.auth.user().onCreate(async (user) => {
         // Update real-time database to notify client to force refresh.
         // Set the refresh time to the current UTC timestamp.
         // This will be captured on the client to force a token refresh.
-        const adminSecret = "test12345";
-        const url = "https://hasura-test-app123.herokuapp.com/v1/graphql";
+        const adminSecret = "password12345";
+        const url = "http://localhost:8080/v1/graphql";
         // const now = admin.firestore.FieldValue.serverTimestamp();
 
         const queryStr = {
